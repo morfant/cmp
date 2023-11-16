@@ -17,4 +17,12 @@ tmp
 .DS_Store
 .vs
 package-info.json
-
+*.xcodeproj
+*.cmake
+*.build
+CMakeFiles/
+DerivedData/
+mock/
+CMakeScripts/
+CMakeCache.txt
+CMakeLists.txt
