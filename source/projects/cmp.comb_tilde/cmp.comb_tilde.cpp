@@ -42,14 +42,16 @@ public:
         }
     };
     
+       
+    
     void operator()(audio_bundle input, audio_bundle output) {
-        auto in = input.samples(0);
-        auto out = output.samples(0);
+        auto in = input.samples(0); // get input vector for channel 0 (first channel)
+        auto out = output.samples(0); // get output vector for channel 0 (first channel)
         auto order = (int)*input.samples(1);
         auto coef = (double)*input.samples(2);
         
         for (auto i = 0; i < m_vectorsize; i++) {
-            auto val = in[i];
+            auto val = lib::math::random(-1.0, 1.0);
             
             out[i] = val + m_samps[order] * coef;
             
