@@ -50,24 +50,25 @@ public:
         values.clear();
         
         for (char c : current) {
+            float d = 0;
                 
             if (c == 'A') {
-                float d = randf(0.1);
+//                float d = randf(0.1);
                 values.push_back(0.3 + d);
             } else if (c == 'B') {
-                float d = randf(0.1);
+//                float d = randf(0.1);
                 values.push_back(-0.3 + d);
             } else if (c == 'C') {
-                float d = randf(0.1);
+//                float d = randf(0.1);
                 values.push_back(0.5 + d);
             } else if (c == 'D') {
-                float d = randf(0.1);
+//                float d = randf(0.1);
                 values.push_back(-0.5 + d);
             } else if (c == 'E') {
-                float d = randf(0.1);
+//                float d = randf(0.1);
                 values.push_back(-0.9 + d);
             } else if (c == 'F') {
-                float d = randf(0.1);
+//                float d = randf(0.1);
                 values.push_back(0.9 + d);
             } else if (c == 'G') {
                 float r = -1 + ((float)rand() / ((float)RAND_MAX/2) );
@@ -174,7 +175,8 @@ public:
     
     sample operator()() {
         count %= values.size();
-        return values[count++];
+//        return values[count++];
+        return values.at(count++);
     }
 };
 
